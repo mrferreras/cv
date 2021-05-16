@@ -1,17 +1,17 @@
 /**************** Reinicio de Styles *************/
 
-/*{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;   
 
-}*/
+}
 /**************** TAGS STYLES ********************/
 
 body {
     margin: 0;
     font-family: 'Merriweather', serif;
-    background: #222831;
+    background: 	#212129;
     text-align: center;
     color: #c3c3c3;
 }
@@ -20,16 +20,25 @@ h1 {
     color: #c3c3c3;
     font-family: 'Sacramento', cursive;
     font-size: 5.625em;
-    
     margin: 50px auto 0 auto;
 }
 
 h2 {
     color: #c3c3c3;
-    font-size: 2rem;    
+    font-size: 2.1875em;    
+    padding: 30px;
 }
 
-h3, a {
+h3 {
+    font-size: 1.375em;
+    color: #1687a7;
+}
+
+p {
+    font-size: 1.125rem;
+}
+
+a {
     color: #1687a7;
 }
 
@@ -39,56 +48,111 @@ img {
 }
 
 hr {
-    border-style: dashed none none none;
+    border-style: dotted none none none;
     height: 3px;
-    width: 95%;
+    width: 5%;
     border-color: #a7bbc7;
-    border-width: 4px;
+    border-width: 8px;
+    margin: 6.25rem auto;
+    
 
 }
 
 a {
     display: inline-block;
-    padding: .625rem;
+    font-size: large;
+    padding: 1.25em;
     text-decoration: none;
 }
 
 a:hover {
     color: #c3c3c3;
-    text-decoration: underline;
 }
+
+
 
 /*************** Class Styles *******************/
 
-.contenedor-principal{
-    width: 90%;
-    max-width: 56.25rem;
-    margin: auto;
-}
 
 .top-container { 
-    padding-top: 100px;
+    margin-bottom: 0;
+    padding: 6.25em 1.25em 0 1.25em;
     position: relative;
     
 }
 
+.middle-container {
+    padding: 6.25em 1.25em 5rem 1.25em;
+    background-color: #222831;
+}
+
+.bottom-container {
+    padding: 3.125em 1.25em 3.125rem 1.25em;
+}
 .top-cloud {
     position: absolute;
-    right: 5%;
+    right: 25%;
     top: 100px;
 }
 
 .bottom-cloud {
     position: absolute;
-    left: 5%;
-    top: 250px;
+    left: 25%;
+    top: 390px;
 }
 
 .profesion {
     font-weight: normal;
 }
 
-.skills-prop {
-    border-radius: 50%;
+.skills {
+    width: 60%;
+    margin: auto;
 }
 
+.skill-row {
+    width: 90%;
+    margin: 100px auto;
+    text-align: left;
+}
+.skill-row h2, p {
+    line-height: 2;
+}
+
+
+.img-skills-const{       /*Contenedor imagenes skills-Const*/
+    width: 9.375rem;
+    height: 9.375rem;   
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+.img-skills-dev{       /*Contenedor imagenes skills-dev*/
+    width: 9.375rem;
+    height: 9.375rem;   
+    float: right;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.skill-const, .skill-progr{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;    
+}
+
+.btn {
+    color: #c3c3c3;
+    width: 12.5rem;
+    font-size: 1.25em;
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: 	#00897b;
+}
+
+.btn:hover {
+    color: #212129;
+    background-color: #c3c3c3;
+}
