@@ -43,8 +43,9 @@ a {
 }
 
 img {
-    display: inline-block;
+    display: block;
     max-width: 95%;
+    margin: auto;
 }
 
 hr {
