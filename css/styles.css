@@ -7,33 +7,56 @@
 
 }
 
-
+html {
+    scroll-behavior: smooth;
+}
 /**************** Variables **********************/
 
 :root {
     --facebook: #3b5999;
     --twitter: #55acee;
     --linkedin: #0077B5;
+    --correo: #BB001B;
+
+    /* COLORES */
+    --colorGeneral: #393e46;
+    --fondoHeader: #aad8d3;
+    --fondoMain: #eeeeee;
+    --fondoBoton: #aad8d3;
+
+    /* Querys */
+    --vp : (
+        desktop : 1330px,
+        tablet : 768px,
+        mobile : 480px
+    );
+
+    
 }
+
+/***** Querys *****/
+
+/*ancho: 1330 skills pasar a column**/
+
 /**************** TAGS STYLES ********************/
 
 body {
     margin: 0;
     font-family: 'Merriweather', serif;
-    background: 	#212129;
+    background: 	#aad8d3;
     text-align: center;
-    color: #c3c3c3;
+    color: var(--colorGeneral);
 }
 
 h1 {
-    color: #c3c3c3;
+    color: var(--colorGeneral);
     font-family: 'Sacramento', cursive;
     font-size: 5.625em;
     margin: 50px auto 0 auto;
 }
 
 h2 {
-    color: #c3c3c3;
+    color: var(--colorGeneral);
     font-size: 2.1875em;    
     padding: 30px;
 }
@@ -41,6 +64,7 @@ h2 {
 h3 {
     font-size: 1.375em;
     color: #1687a7;
+    padding-bottom: 1.25rem;
 }
 
 p {
@@ -75,42 +99,112 @@ a {
     text-decoration: none;
 }
 
-/*************** Class Styles *******************/
-
-
-.top-container { 
-    margin-bottom: 0;
-    padding: 6.25em 1.25em 0 1.25em;
-    position: relative;
-    
+span {
+    color: var(--colorGeneral);
 }
+
+/*==============================*/
+/*======== H E A D E R =========*/
+/*==============================*/
+
+
+
+.navBar {
+    background: rgba(54, 127, 170, 0.5);
+   /* background: var(--fondoHeader);*/
+    display: flex;
+	justify-content: flex-end;
+    width: 100%;
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    
+
+    /*background: var(--fondoHeader);*/
+}
+
+.navBar a{
+    font-size: 1.125em;
+    color: var(--colorGeneral);
+	display: inline-block;
+	padding: 20px;
+	text-align: center;
+	transition: .3s ease-out all;
+}
+
+.navBar a:hover {
+	background: var(--fondoBoton);
+	text-decoration: none;
+}
+
+.contenedorNav {
+   /* background: #f4f4f4;*/
+	width: 32.5em;
+	
+}
+
+
+
+
+
+.header-descripcion { 
+    height: 100vh;
+    padding: 6.25em 1.25em 0 1.25em;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;    
+}
+
+.header-descripcion h2 {
+    font-size: 25px;
+}
+
+
+.grua {
+    position: absolute;
+    right: 15%;
+    top: 100px;
+}
+
+.excavator {
+    position: absolute;
+    left: 15%;
+    top: 220px;
+}
+
+.complejos {
+    margin-bottom: 4.8vh;
+    padding-bottom: 0vh;
+
+   width: 80%;
+}
+
+
+
+/*==============================*/
+/*======== M A I N =========*/
+/*==============================*/
 
 .middle-container {
     padding: 6.25em 1.25em 5rem 1.25em;
-    background-color: #222831;
+    background-color: var(--fondoMain);
 }
 
 .bottom-container {
     padding: 3.125em 1.25em 3.125rem 1.25em;
 }
-.top-cloud {
-    position: absolute;
-    right: 25%;
-    top: 100px;
-}
 
-.bottom-cloud {
-    position: absolute;
-    left: 25%;
-    top: 390px;
-}
 
 .profesion {
     font-weight: normal;
 }
 
 .skills {
-    width: 60%;
+    width: 70%; /****************************************************************/
     margin: auto;
 }
 
@@ -118,50 +212,133 @@ a {
     width: 90%;
     margin: 100px auto;
     text-align: left;
+
+    display: flex;
+    flex-wrap: nowrap;/********************************************************/
 }
+
+.skill-row2 {
+    width: 90%;
+    margin: 100px auto;
+    text-align: left;
+
+    display: flex;
+    flex-wrap: nowrap;/********************************************************/
+    flex-direction: row-reverse;
+}
+
+.texto-desc {
+    padding-top:  1.875rem;
+}
+
 .skill-row h2, p {
     line-height: 2;
 }
 
 
 .img-skills-const{       /*Contenedor imagenes skills-Const*/
-    width: 9.375rem;
-    height: 9.375rem;   
-    float: left;
+    width: 12.5rem;
+    height: 12.5em;  
     margin-right: 30px;
-    margin-bottom: 20px;
 }
 
 .img-skills-dev{       /*Contenedor imagenes skills-dev*/
-    width: 9.375rem;
-    height: 9.375rem;   
-    float: right;
-    margin-left: 30px;
-    margin-bottom: 20px;
+    width: 12.5rem;
+    height: 12.5em; 
+    margin-left: 30px; 
 }
 
 .skill-const, .skill-progr{
     width: 100%;
     height: 100%;
-    border-radius: 100%;    
+    border-radius: 50%;    
 }
 
-.btn {
-    color: #c3c3c3;
-    width: 12.5rem;
-    font-size: 1.25em;
-    margin-top: 40px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: 	#00897b;
+/* ======= FORMULARIO ==========*/
+
+main .contacto {
+    padding: 60px 0;
+    width: 50%;
+    margin: auto;
 }
 
-.btn:hover {
-    color: #212129;
-    background-color: #c3c3c3;
+main .contenedor {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-/***FOOTER***/
+main .contacto .titulo {
+    font-size: 2.5rem;
+    line-height: 34px;
+    margin-bottom: 40px;
+    font-weight: 300;
+    color: var(--colorGeneral);
+    text-align: center;
+}
+
+main .contacto .formulario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+}
+
+main .contacto .formulario input[type="text"],
+main .contacto .formulario input[type="email"],
+main .contacto .formulario textarea {
+    border: 2px solid #cecece;
+    border-radius: 5px;
+    padding: 15px 20px;
+    font-size: 20px;
+    color: #a4a4a4;
+}
+
+main .contacto .formulario input[type="text"]:focus,
+main .contacto .formulario input[type="email"]:focus,
+main .contacto .formulario textarea:focus {
+    border: 2px solid #387bea;
+}
+
+main .contacto .formulario input[type="text"],
+main .contacto .formulario input[type="email"]{
+    width: 49%;
+    margin-bottom: 15px;
+}
+
+main .contacto .formulario textarea {
+    width: 100%;
+    height: 100px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100px;
+    max-height: 300px;
+    margin-bottom: 15px;
+}
+
+main .contacto .formulario .boton {
+    margin: auto;
+    flex-basis: 100%;
+    background: var(--colorGeneral);
+    font-size: 25px;
+    color: var(--fondoMain);
+    border: 2px solid transparent;
+    border-radius: 3px;
+    padding: 15px 40px;
+    cursor: pointer;
+}
+
+main .contacto .formulario .boton:hover {
+    background: var(--fondoBoton);
+    color: var(--colorGeneral);
+}
+
+
+
+/*==============================*/
+/*======== F O O T E R =========*/
+/*==============================*/
+
 
 .redes {
     display: flex;
@@ -171,7 +348,7 @@ a {
 }
 .redes a {
     display: block;
-    color: #c3c3c3;
+    color: var(--colorGeneral);
     padding: 0 20px;
     line-height: 50px;
     font-size: 3.75em;
@@ -187,4 +364,193 @@ a {
 
 .twitter:hover {
     color: var(--twitter);
+}
+
+.correo:hover {
+    color: var(--twitter);
+}
+
+
+/*==============================*/
+/*======== MEDIA QUERYS ========*/
+/*==============================*/
+
+@media screen and (max-width: 1800px) {
+
+    .complejos {
+        margin-bottom: 0vh;
+        padding-bottom: 0vh;
+    
+        width: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 1330px) {
+
+    .grua {
+        right: 15%;
+        top: 450px;
+
+        width: 15%;
+    }
+    
+    .excavator {
+        left: 10%;
+        top: 100px;
+
+        width: 15%;
+    }
+
+    .navBar {
+        justify-content: center;
+        width: 100%;
+        font-size: 18px;
+        top: 0;
+        z-index: 1;
+    }
+    
+    /*M A I N*/
+    h2 {
+        font-size: 35px;        
+    }
+    p{
+        font-size: 25px;
+    }
+
+    /*.skills,
+    .profile {
+        background: #c3c3c3;
+        width: 80%; 
+        margin: auto;
+        
+    }*/
+    
+    .skill-row {
+        width: 70%;
+        flex-direction: column;
+        justify-content: center;
+    }
+       
+    .skill-row2 {
+        width: 70%;
+        margin: auto;
+        flex-direction: column;
+        /*justify-content: center;*/
+    }
+    
+        
+    .img-skills-const{       /*Contenedor imagenes skills-Const*/
+        width: 100%;
+        height: 100%;
+        margin: auto;
+       /* height: 28.5em; */
+    }
+
+    .img-skills-dev{       /*Contenedor imagenes skills-dev*/
+        width: 100%;
+        height: 100%; 
+        margin: auto;
+    }
+
+    
+    .complejos {
+        margin-top: 4.0625rem;
+        padding-bottom: 0vh;
+    
+        width: 100%;
+    }
+
+    .miFoto {
+        width: 25%;
+        border-radius: 50%;
+        border: 5px solid var(--fondoMain);
+        margin-top: -15.625rem;
+    }
+
+    main .contacto {
+        width: 90%;
+    }
+
+    
+    main .contacto .formulario {
+        flex-direction: column;
+    }
+    main .contacto .formulario input[type="text"],
+    main .contacto .formulario input[type="email"],
+    main .contacto .formulario .boton {
+        width: 100%;
+    }
+
+    main .contacto .titulo {
+        margin-bottom: 25px;
+        
+    }
+    
+
+    
+}
+
+@media screen and (max-width: 1025px) {
+
+    .header-descripcion {
+        height: auto;
+    }
+
+    .navBar {
+        position: absolute;
+    
+        
+    
+        /*background: var(--fondoHeader);*/
+    }
+    
+
+
+    .miFoto {
+        width: 25%;
+        border-radius: 50%;
+        border: 5px solid var(--fondoMain);
+        margin-top: -13.625rem;
+    }
+    
+    .grua {
+        right: 10%;
+        top: 250px;
+
+        width: 15%;
+    }
+    
+    .excavator {
+        left: 5%;
+        top: 70px;
+
+        width: 15%;
+    }
+
+    .complejos {
+        margin-top: 3.0625rem; 
+    }
+
+    .skills {
+        width: 100%;
+    }
+
+    .profile {
+        background: #c3c3c3;
+        width: 80%; 
+        margin: auto;
+        
+    }
+    h3 {
+        font-size: 25px;
+        text-align: left;
+        padding: 25px;
+    }
+    p{
+        /*text-align: justify;*/
+        padding: 25px;
+        font-size: 20px;
+        margin: auto;
+    }
 }
