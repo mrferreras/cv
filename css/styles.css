@@ -554,3 +554,53 @@ main .contacto .formulario .boton:hover {
         margin: auto;
     }
 }
+
+@media screen and (max-width: 540px)
+{
+    
+    .navBar {
+        flex-direction: column;
+        width: 100%;
+        position:absolute;
+    }
+
+    .navBar a{
+        width: 100%;
+        font-size: 1.2em;
+        flex-direction: column;
+        border-bottom: 2px solid rgba(237, 248, 255, 0.5);
+    }
+
+
+    .contenedorNav {
+       /* background: #f4f4f4;*/
+    	width: 100%;
+    }
+
+    
+    .grua {
+        right: 5%;
+        top: 390px;
+
+        width: 15%;
+    }
+    
+    .excavator {
+        left: 5%;
+        top: 350px;
+
+        width: 15%;
+    }
+
+    h1 {
+        font-size: 50px;
+        margin-top: 300px;
+        padding-top: 0px;
+    }
+
+    header h2 {
+        font-size: 16px;
+    }
+
+
+}
