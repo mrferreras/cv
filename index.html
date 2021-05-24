@@ -16,57 +16,105 @@
 </head>
 <body>
     
-  <div class="top-container">
-    <img class="top-cloud" src="img/cloud.png" alt="nube">
-    <h1>Hola, soy Carlos.</h1>
-    <h2 class="profesion">Ingeniero Civil y programador.</h2>
-    <img class="bottom-cloud" src="img/cloud.png" alt="nube">
-    <img src="img/mountain3.png" alt="montanya">
-  </div>
-  <div class="middle-container">
-    <div class="profile">
-      <img src="img/Carlos.png" alt="Yo">
-      <h2>Hello.</h2>
-      <p>Egresado de la Universidad Autónoma de Santo Domingo (UASD) en 2004.</p>
-      <p>Construcción civil, presupuesto, tecnologia web y programación.</p>
-    </div>
-    <hr>
-    <div class="skills">
-      <h2>My Skills.</h2>
-      <div class="skill-row">
-        <div class="img-skills-const">
-          <img class="skill-const" src="https://media.giphy.com/media/3o85xA30i7z1LUIISY/giphy.gif"  alt="">
-        </div>  
-        <h3>Construcción Civil</h3>
-        <p class="skill-description1">Control de calidad, supervisión, estabilización suelos, movimiento de tierras, asfalto, obras de artes, presupuesto, dirección...</p>
+  <header>
+
+        <div class="header-contenedor">
+
+          <nav class="navBar">
+
+            <div class="contenedorNav">
+              <a href="#acerca">Acerca de</a>
+              <a href="#proyect">Proyectos</a>
+              <a href="#contact">Contacto</a>
+              <a href="atributos.html">Atributos</a>
+            </div>
+        
+          </nav>
+          <section class="header-descripcion">
+                <img class="grua" src="images/grua.png" alt="nube">
+                <h1>Hola, soy Carlos.</h1>
+                <h2 class="profesion">Ingeniero Civil y programador.</h2>
+                <img class="excavator" src="images/excavator.png" alt="nube">
+                <img class="complejos" src="images/complejos.png" alt="montanya">
+          </section>
+
+        </div>
+
+        
+    </header>
+
+  <main>
+
+        <div class="middle-container">
+
+          <div class="profile"> <!-- ACERCA DE -->
+
+              <img class="miFoto" src="images/Carlos.png" alt="Yo">
+              <h2 id="acerca">Hello.</h2>
+              <p>Construcción civil, presupuesto, tecnologia web y programación.</p>
+
+          </div>
+          <hr>
+        
+          <div class="skills"> <!-- SKILLS -->
+              <h2 id="proyect">My Skills.</h2>
+              <div class="skill-row">
+            
+                <div class="img-skills-const">
+                    <img class="skill-const" src="https://media.giphy.com/media/3o85xA30i7z1LUIISY/giphy.gif"  alt="">
+                </div>  
+
+                <div class="texto-desc">
+                    <h3>Construcción Civil</h3>
+                    <p class="skill-description1">Control de calidad, supervisión, estabilización suelos, movimiento</p> 
+                    <p>de tierras, asfalto, obras de artes, presupuesto, dirección técnica.</p>
+                </div>
+
+            </div>
+          
+            <div class="skill-row2">
+
+                <div class="img-skills-dev">
+                    <img class="skill-progr" src="https://media.giphy.com/media/SWoSkN6DxTszqIKEqv/giphy.gif" alt="">
+                </div>   
+                <div class="texto-desc">
+                    <h3>web-development y Programación</h3>
+                    <p class="skill-description2">Diseño web, PHP, Javascript, Python, C#, Xamarin.Forms, Bases de datos.</p>
+                </div>         
+
+            </div>
+
+          </div>
+          <hr>
+
+          <section class="contacto">
+                <div class="contenedor"> 
+                  <h2 class="titulo" id="contact">Ponte en contacto</h2>
+                  <form action="mailto:mrferreras@gmail.com" class="formulario" method="POST" enctype="text/plain">
+                      <input type="text" placeholder="Nombre" name="nombre" required>
+                      <input type="email" placeholder="Correo" name="correo" required>
+                      <textarea name="mensaje" placeholder="Mensaje:"></textarea>
+                      <input class="boton" type="submit" value="Enviar">
+                  </form>
+                </div>
+            </section>
+        </div>
+  </main>
+
+  <footer>
+
+      
+      <div class="bottom-container">
+
+          <div class="redes">
+              <a class="linkedin" href="https://www.linkedin.com/in/carlos-ferreras-aa2395210/"><i class="fab fa-linkedin"></i></a>
+              <a class="twitter" href="https://twitter.com/mrferreras"><i class="fab fa-twitter-square"></i></a>
+              <a class="facebook" href="https://www.facebook.com/carlos.ferreras.16906"><i class="fab fa-facebook-square"></i></a>
+          </div>
+
+          <p class="copyright">© 2021 Carlos Ferreras.</p>
       </div>
-      <div class="skill-row">
-        <div class="img-skills-dev">
-          <img class="skill-progr" src="https://media.giphy.com/media/SWoSkN6DxTszqIKEqv/giphy.gif" alt="">
-        </div>            
-        <h3>web-development y Programación</h3>
-        <p class="skill-description2">Diseño web, PHP, Javascript, Python, C#, Xamarin.Forms, Bases de datos.</p>
-      </div>
-    </div>
-    <hr>
-    <div class="contact-me">
-      <h2>Ponte en contacto</h2>
-      <h3>Elige la via correspondiente</h3>
-      <p>Pendiente siempre en dar respuesta lo más breve posible.</p>
-      <a class="btn" href="mailto:mrferreras@gmail.com">CONTACT ME</a>
-    </div>
-  </div>
-  
-  
-  <div class="bottom-container">
-    <div class="redes">
-      <a class="linkedin" href="https://www.linkedin.com/in/carlos-ferreras-aa2395210/"><i class="fab fa-linkedin"></i></a>
-      <a class="twitter" href="https://twitter.com/mrferreras"><i class="fab fa-twitter-square"></i></a>
-      <a class="facebook" href="https://www.facebook.com/carlos.ferreras.16906"><i class="fab fa-facebook-square"></i></a>
-    </div>
-    
-    <p class="copyright">© 2021 Carlos Ferreras.</p>
-  </div>
+  </footer>
       
 
 
